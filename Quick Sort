@@ -1,0 +1,47 @@
+public class MyClass {
+    public static void main(String args[]) {
+        int[] arr = {10, 80, 30, 90, 50, 40, 70};
+        MyClass sorting = new MyClass();
+        System.out.println("Before Sorting : ");
+        sorting.print(arr);
+        sorting.quickSort(arr);
+        System.out.println("\nAfter Sorting : ");
+        sorting.print(arr);
+    }
+
+    void quickSort(int[] arr) {
+        quickSortUtils(arr, 0, arr.length - 1);
+    }
+
+    void quickSortUtils(int[] arr, int left, int right) {
+        if (left < right) {
+            int pivot = partition(arr, left, right);
+            quickSortUtils(arr, left, pivot - 1);
+            quickSortUtils(arr, pivot + 1, right);
+        }
+    }
+
+    int partition(int[] arr, int left, int right) {
+        int j = left - 1;
+        int pivotElement = arr[right];
+        for (int i = left; i < right; i++) {
+            if (arr[i] < pivotElement) {
+                j++;
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+
+        }
+        int temp = arr[j + 1];
+        arr[j + 1] = arr[right];
+        arr[right] = temp;
+        return (j + 1);
+    }
+
+    void print(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
