@@ -2,8 +2,8 @@ public class MyClass {
     public static void main(String args[]) {
       int[] arr = {2, 4, 5, 7, 10, 12, 18, 23, 29, 34, 45};
       Bound bound = new Bound();
-      System.out.println("Upper Bound is:- " + bound.upperBound(arr, 27));
-      System.out.println("Lower Bound is:- " + bound.lowerBound(arr, 27));
+      System.out.println("Upper Bound is: " + bound.upperBound(arr, 27));
+      System.out.println("Lower Bound is: " + bound.lowerBound(arr, 27));
     }
 }
 class Bound{
