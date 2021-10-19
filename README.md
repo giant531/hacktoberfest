@@ -1,5 +1,5 @@
 # hacktoberfest 2020
-#Happy hacking!!!!
+#Happy hacking in fest!!
 ## Introduction
 
 Write hello world in every language and framework possible :)
