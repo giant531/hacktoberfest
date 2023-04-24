@@ -1,13 +1,16 @@
 public class BinarySearch {
+
     public static void main(String args[]) {
      int[]arr = {2, 4, 5, 8, 12, 15, 17, 19, 25, 30};
 	    int size = arr.length;
 	    int target = 2;
 	    System.out.println(binarySearch(arr, target));
     }
+    
     static int binarySearch(int[] arr, int target) {
         return binarySearchUtil(0, arr.length - 1, arr, target);
     }
+    
     static int binarySearchUtil(int left, int right, int[] ar, int target) {
         int mid;
         while (left <= right) {
@@ -22,4 +25,5 @@ public class BinarySearch {
         }
         return -1;
     }
+    
 }
